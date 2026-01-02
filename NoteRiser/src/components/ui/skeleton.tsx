@@ -1,7 +1,15 @@
-import React from 'react';
+import { cn } from "@/lib/utils"
 
-export const Skeleton: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ ...props }) => (
-  <div {...props} style={{ background: '#eee' }}> </div>
-);
+function Skeleton({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div
+      className={cn("animate-pulse rounded-md bg-primary/15", className)}
+      {...props}
+    />
+  )
+}
 
-export default Skeleton;
+export { Skeleton }
