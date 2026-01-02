@@ -1,12 +1,41 @@
 {
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
     "jsx": "react-jsx",
-    "strict": true,
-    "esModuleInterop": true,
+    "jsxImportSource": "react",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": false,
+    "noImplicitAny": false,
+    "strict": false,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true,
+    "verbatimModuleSyntax": false,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "noUncheckedIndexedAccess": false,
+    "exactOptionalPropertyTypes": false,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/integrations/*": [
+        "integrations/*",
+      ],
+      "@/integrations": [
+        "integrations"
+      ],
+      "@wix/codegen-framework-packages": [
+        "integrations"
+      ],
+    }
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "integrations"
+  ]
 }
