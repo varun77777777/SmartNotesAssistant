@@ -1,5 +1,3 @@
-export default {
-  content: ['./src/**/*.{js,ts,jsx,tsx,astro}'],
-  theme: { extend: {} },
-  plugins: [],
-};
+import config from "./src/tailwind.config.mjs";
+
+export default config;
